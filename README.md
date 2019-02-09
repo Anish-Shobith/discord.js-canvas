@@ -26,7 +26,9 @@ Packages Used:
 
 More Comming Soon!!
 
+# Example
 For Example Please Check:
+[Click Here](https://github.com/Anish-Shobith/discord.js-canvas/tree/master/example)
 
 
 # Project Info
