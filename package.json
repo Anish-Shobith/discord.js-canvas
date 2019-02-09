@@ -1,0 +1,14 @@
+{
+  "name": "discord.js-canvas",
+  "version": "0.0.1",
+  "description": "Easy to use canvas for discord.js",
+  "main": "index.js",
+  "author": "Anish Shobith",
+  "license": "MIT",
+  "dependencies": {
+    "canvas": "^2.0.1",
+    "discord.js": "discordjs/discord.js",
+    "node-superfetch": "^0.1.9"
+  },
+  "repository": "https://github.com/Anish-Shobith/discord.js-canvas"
+}
