@@ -11,7 +11,7 @@ if you wanna use in your projects sure go ahead and give it a try !!
 Packages Used:
 
 * node-superfetch
-* discord.js [Master] //stable can be also used just install `npm i discord.js` examples are based on master!!
+* discord.js [Master] //stable can be also used just install `npm i discord.js` examples are based on master!! [Recomended: master version]
 * canvas@next
 
 
@@ -22,13 +22,20 @@ Packages Used:
 * [x] sepia
 * [x] contrast
 * [x] distort
-* [x] drawImageWithTin
+* [x] drawImageWithTint
 
 More Comming Soon!!
 
 # Example
 For Example Please Check:
 [Click Here](https://github.com/Anish-Shobith/discord.js-canvas/tree/master/example)
+
+
+# Suggestions And Bugs
+ If its a error feel free to make it as a issues in [Issues tab](https://github.com/Anish-Shobith/discord.js-canvas/issues)
+
+ if its a suggestion feel free to [pull a request](https://github.com/Anish-Shobith/discord.js-canvas/pulls)
+
 
 
 # Project Info
