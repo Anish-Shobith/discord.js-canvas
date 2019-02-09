@@ -2,6 +2,8 @@
 
 `npm install discord.js-canvas`
 
+<a href="https://nodei.co/npm/discord.js-canvas/"><img src="https://nodei.co/npm/discord.js-canvas.png?downloads=true&downloadRank=true&stars=true"></a>
+
 # About:
 
 I made this package actaully for discord.js bots and the examples are given on discord.js itself!!
