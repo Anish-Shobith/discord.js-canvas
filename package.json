@@ -3,6 +3,10 @@
   "version": "0.0.1",
   "description": "Easy to use canvas for discord.js",
   "main": "index.js",
+   "scripts": {
+    "test": "eslint ./",
+    "start": "node index.js"
+  },
   "author": "Anish Shobith",
   "license": "MIT",
   "dependencies": {
