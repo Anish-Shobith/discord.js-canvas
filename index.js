@@ -1,4 +1,18 @@
 module.exports = class CanvasUtil {
+
+    static contrast(ctx, x, y, width, height) {
+		const data = ctx.getImageData(x, y, width, height);
+		const factor = (259 / 100) + 1;
+		const intercept = 128 * (1 - factor);
+		for (let i = 0; i < data.data.length; i += 4) {
+			data.data[i] = (data.data[i] * factor) + intercept;
+			data.data[i + 1] = (data.data[i + 1] * factor) + intercept;
+			data.data[i + 2] = (data.data[i + 2] * factor) + intercept;
+		}
+        ctx.putImageData(data, x, y);
+        
+		return ctx;
+	}
 	static greyscale(ctx, x, y, width, height) {
 		const data = ctx.getImageData(x, y, width, height);
 		for (let i = 0; i < data.data.length; i += 4) {
@@ -8,9 +22,9 @@ module.exports = class CanvasUtil {
 			data.data[i + 2] = brightness;
 		}
 		ctx.putImageData(data, x, y);
+
 		return ctx;
 	}
-
 	static invert(ctx, x, y, width, height) {
 		const data = ctx.getImageData(x, y, width, height);
 		for (let i = 0; i < data.data.length; i += 4) {
@@ -19,9 +33,9 @@ module.exports = class CanvasUtil {
 			data.data[i + 2] = 255 - data.data[i + 2];
 		}
 		ctx.putImageData(data, x, y);
+
 		return ctx;
 	}
-
 	static silhouette(ctx, x, y, width, height) {
 		const data = ctx.getImageData(x, y, width, height);
 		for (let i = 0; i < data.data.length; i += 4) {
@@ -30,9 +44,9 @@ module.exports = class CanvasUtil {
 			data.data[i + 2] = 0;
 		}
 		ctx.putImageData(data, x, y);
+
 		return ctx;
 	}
-
 	static sepia(ctx, x, y, width, height) {
 		const data = ctx.getImageData(x, y, width, height);
 		for (let i = 0; i < data.data.length; i += 4) {
@@ -42,28 +56,15 @@ module.exports = class CanvasUtil {
 			data.data[i + 2] = brightness;
 		}
 		ctx.putImageData(data, x, y);
+
 		return ctx;
 	}
-
-	static contrast(ctx, x, y, width, height) {
-		const data = ctx.getImageData(x, y, width, height);
-		const factor = (259 / 100) + 1;
-		const intercept = 128 * (1 - factor);
-		for (let i = 0; i < data.data.length; i += 4) {
-			data.data[i] = (data.data[i] * factor) + intercept;
-			data.data[i + 1] = (data.data[i + 1] * factor) + intercept;
-			data.data[i + 2] = (data.data[i + 2] * factor) + intercept;
-		}
-		ctx.putImageData(data, x, y);
-		return ctx;
-	}
-
-	static distort(ctx, amplitude, x, y, width, height, strideLevel = 4) {
+		static distort(ctx, amplitude, x, y, width, height, strideLevel = 4) {
 		const data = ctx.getImageData(x, y, width, height);
 		const temp = ctx.getImageData(x, y, width, height);
 		const stride = width * strideLevel;
-		for (let i = 0; i < width; i++) {
-			for (let j = 0; j < height; j++) {
+		for (let i = 0; i < width; i++) { // eslint-disable-line no-plusplus
+			for (let j = 0; j < height; j++) { // eslint-disable-line no-plusplus
 				const xs = Math.round(amplitude * Math.sin(2 * Math.PI * 3 * (j / height)));
 				const ys = Math.round(amplitude * Math.cos(2 * Math.PI * 3 * (i / width)));
 				const dest = (j * stride) + (i * strideLevel);
@@ -74,9 +75,9 @@ module.exports = class CanvasUtil {
 			}
 		}
 		ctx.putImageData(data, x, y);
+
 		return ctx;
 	}
-
 	static drawImageWithTint(ctx, image, color, x, y, width, height) {
 		const { fillStyle, globalAlpha } = ctx;
 		ctx.fillStyle = color;
@@ -86,5 +87,4 @@ module.exports = class CanvasUtil {
 		ctx.fillStyle = fillStyle;
 		ctx.globalAlpha = globalAlpha;
 	}
-
 };
