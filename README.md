@@ -4,7 +4,7 @@
 
 <a href="https://nodei.co/npm/discord.js-canvas/"><img src="https://nodei.co/npm/discord.js-canvas.png?downloads=true&downloadRank=true&stars=true"></a>
 
-https://img.shields.io/travis/com/Anish-Shobith/discord.js-canvas.svg?style=for-the-badge
+<img src = "https://img.shields.io/travis/com/Anish-Shobith/discord.js-canvas.svg?style=for-the-badge">
 
 # About:
 
