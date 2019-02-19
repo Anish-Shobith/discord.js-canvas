@@ -1,3 +1,6 @@
+
+Client File Example
+```js
 const { Client, Collection } = require("discord.js");
 const { readdir } = require("fs");
 const config = require("./config");
@@ -46,4 +49,15 @@ bot.on("message", async message => {
     if (commandfile) commandfile.run(bot, message, args);
 });
 
-bot.login(config.token)
+bot.login(config.token)```
+
+Config File
+```js
+module.exports = {
+token: "",
+prefix: ""
+}```
+
+Contrast Example
+```js
+```
