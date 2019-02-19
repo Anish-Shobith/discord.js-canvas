@@ -87,4 +87,5 @@ module.exports = class CanvasUtil {
 		ctx.fillStyle = fillStyle;
 		ctx.globalAlpha = globalAlpha;
 	}
+/*eslint eol-last: ["error", "always"]*/
 };
