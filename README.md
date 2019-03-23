@@ -41,6 +41,6 @@ For Example Please Check:
  if its a suggestion feel free to [pull a request](https://github.com/Anish-Shobith/discord.js-canvas/pulls)
 
 
-
 # Project Info
 Developer - Anish Shobith a.k.a (ExTrEmE_HeRo)
+Credits - [**dragonfire535/xiao**](https://github.com/dragonfire535/xiao/blob/master/util/Canvas.js)
